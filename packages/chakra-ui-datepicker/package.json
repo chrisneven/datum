@@ -1,0 +1,32 @@
+{
+  "name": "chakra-ui-datepicker",
+  "version": "0.0.4",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf lib",
+    "compile:js": "node ./esbuild.js",
+    "compile:ts": "tsc --emitDeclarationOnly --outDir lib",
+    "compile": "npm run clean && concurrently npm:compile:*"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": "^1.8.7",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "date-fns": "^2.28.0",
+    "framer-motion": "^6"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "config": "*",
+    "esbuild": "^0.14.28",
+    "tsconfig": "*",
+    "typescript": "^4.5.3"
+  }
+}

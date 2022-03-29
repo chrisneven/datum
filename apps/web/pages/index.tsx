@@ -1,10 +1,5 @@
-import { Button } from "ui";
+import { Datepicker } from "chakra-ui-datepicker";
 
 export default function Web() {
-  return (
-    <div>
-      <h1>Web</h1>
-      <Button />
-    </div>
-  );
+  return <Datepicker />;
 }
